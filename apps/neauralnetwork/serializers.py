@@ -14,4 +14,4 @@ class NeuralNetworkSerializer(serializers.ModelSerializer):
     tag = TagSerializer(many=True)
     class Meta:
         model = NeuralNetwork
-        fields = ('title', 'link', 'description', 'zadacha', 'tag', 'image', 'icon_18', 'icon_ru', 'slug', 'order')
+        fields = ('title', 'link', 'description', 'zadacha', 'tag', 'image','dostup', 'icon_18', 'icon_ru', 'slug', 'order')

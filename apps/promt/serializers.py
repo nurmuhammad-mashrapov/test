@@ -5,7 +5,7 @@ from apps.promt.models import Promt
 class PromttListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Promt
-        fields = ('title', 'category', 'order', 'is_active', 'slug')
+        fields = ('title', 'description_ru', 'category', 'order', 'is_active', 'slug')
 
 
 class PromtDetailSerializer(serializers.ModelSerializer):
