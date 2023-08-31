@@ -39,7 +39,8 @@ CUSTOM_APPS = [
     "apps.advertisement",
     "apps.neauralnetwork",
     "apps.education",
-    "apps.promt"
+    "apps.promt",
+    "apps.midjouney",
 ]
 
 THIRD_PARTY_APPS = [
@@ -54,7 +55,8 @@ REST_FRAMEWORK = {
         "django_filters.rest_framework.DjangoFilterBackend",
         "rest_framework.filters.SearchFilter",
     ),
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination"
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 10,
 }
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -155,10 +157,10 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+CSRF_TRUSTED_ORIGINS = ['https://nurmukhammaddev.jprq.live/admin/']
 
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:5173',
-    "https://gregarious-melba-39231f.netlify.app"
+    'http://localhost:5173'
 ]

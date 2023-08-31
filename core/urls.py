@@ -12,6 +12,7 @@ urlpatterns = [
     path("api/v1/promt/", include("apps.promt.urls")),
     path("api/v1/education/", include("apps.education.urls")),
     path("api/v1/neauralnetwork/", include("apps.neauralnetwork.urls")),
+    path("api/v1/midjouney/", include("apps.midjouney.urls")),
 
 ]
 urlpatterns += swagger_urlpatterns
